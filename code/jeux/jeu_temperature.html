@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    
+    <meta charset="UTF-8" />
+
+    <style>
+
+        body
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Vous rêvez de savoir votre température en degré Fahrenheit ? C'est maintenant possible grâce au Laboratoire GSB !</p>
+    <input type="text" id="far"> Fahrenheit
+    <input type="text" id="cels"> Celcius <br><br>
+    <input type="button" value="far to cels" onclick="fartocels()">
+    <input type="button" value="cels to far" onclick="celstofar()">
+    <input type="button" value="reset" onclick="reset()">
+    <script>
+        function fartocels() {
+
+            let celcius = parseFloat(document.getElementById("far").value);
+            let cels = (celcius - 32) / 1.8
+            document.getElementById("cels").value = String(cels);
+
+        }
+
+        function celstofar() {
+
+            let cels = parseFloat(document.getElementById("cels").value);
+            let far = (cels * 1.8) + 32
+            document.getElementById("far").value = String(far);
+
+        }
+
+        function reset() {
+
+            document.getElementById("far").value = "";
+            document.getElementById("cels").value = "";
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Galaxy Swiss Bourdin</title>
+
+    <meta charset="utf-8">
+
+    <meta name="keywords" content="Laboratoire, GSB, Galaxy Swiss Bourdin, Efficom, Lille, Jean-Christophe Lhermitte, Mathieu Hauss, Loïc Fallon, PPE">
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <script type="text/javascript">
+                
+
+                function reset(){
+
+            		document.forms[0].mail.value = "";
+            		document.forms[0].surname.value = "";
+            		document.forms[0].name.value = "";
+            		document.forms[0].birthdate.value = "";
+            		document.forms[0].login.value = "";
+            		document.forms[0].password.value = "";
+            		document.forms[0].password2.value = "";
+            		document.forms[0].job.value = "";
+
+            }
+
+                function ok(){
+                    document.getElementById("confirmation").innerHTML="Un mail de confirmation à été envoyé sur votre boite mail !"
+                }
+
+            
+    </script>
+
+</head>
+
+<body>
+    <header class="entete">
+
+        <div id="logo">
+
+            <a href="index.html">
+		<img src="../img/logo-gsb.png" />
+                
+
+            </a>
+	</div>
+	
+	<div id="menu">
+
+        <nav>
+
+                 <ul id="listeMenu">
+
+                    <li id="accueil">
+
+                        <a href="index.html">Accueil</a>
+
+                    </li>
+
+                    <li id="presentations">
+
+                        <a href="presentation.html">Présentation de l'entreprise</a>
+
+                    </li>
+
+                    <li id="actualité">
+
+                        <a href="actu.html">Actualités</a>
+
+                    <li id="contact">
+
+                        <a href="contact.html">Contact</a>
+
+                    </li>
+
+                    <li id="propos">
+
+                        <a href="apropos.html">A propos</a>
+
+                    </li>
+
+                </ul>
+
+        </nav>
+	</div>
+
+	</header>
+           
+
+    <body onload="reset()">
+
+        <form>
+            <legend>Inscription</legend><br>
+
+            <fieldset id="formulaire">
+
+                <label for="surname">Nom :</label>
+                <input type="text" name="surname">
+
+                <br>
+
+                <label for="name">Prénom :</label>
+                <input name="name" type="text">
+
+            <br>
+
+            <label for="birthdate">Date de naissance:</label>
+            <input name="birthdate" type="date">
+
+            <br>
+
+            <label for="mail">Adresse mail :</label>
+            <input name="mail" type="text" id="1">
+
+            <br>
+
+                <label for="login">Identifiant :</label>
+                <input name="login" type="text">
+
+                <br>
+
+                <label for="motdepasse">Mot de passe :</label>
+                <input type="text" name="mdp" type="password">
+
+                <br>
+
+                <label for="motdepasse">Confirmation :</label>
+                <input name="password2" type="text" type="password">
+
+            <br>
+
+            <label for="job">Profession :</label>
+            <select name="job" required>
+                <option>Chirurgien</option>
+                <option>Médecin</option>
+                <option>Médecin spécialiste</option>
+                <option>Infirmier</option>
+                <option>Pharmacien</option>
+                <option>Particulier</option>
+            </select>
+
+            
+            </fieldset><br>
+
+            <div class="button">
+            <input type="checkbox" value="1">Je souhaite m'inscrire à la Newsletter GSB.<br>
+            <input type="checkbox" value="2" required>En cochant cette case, vous acceptez l'intégralité de nos Conditions générales de vente, notre Politique de gestion de Vos informations personnelles et notre Politique Cookies et publicité sur Internet. <br>
+            </div><br>
+
+            <div id="ui">
+            <button onclick="reset()">Recommencer</button>
+            <button onclick="ok()">S'inscrire</button>
+        	</div><br>
+            <div id="confirmation" align="center"></div><br>
+
+
+    <footer class="footer">
+
+            <div class="copyright"><span>Copyright © 2018 Efficom EFFAB- Tout droits réservés - Réalisation <a id="jeu" href="jeu_temperature.html">Mathieu Hauss</a> / <a id="jeu" href="jeux_baton.html">Loïc Fallon</a> / <a id="jeu" href="jeu_pillule.html">Jean-Christophe Lhermitte</a> - Laboratoire GSB -     PPE</span></div>
+
+            <div class="footermenu">
+
+                <ul class="menu-footer">
+
+                        <li class="legalmention">
+
+                                <a href="">Mentions légales</a>
+
+                        </li>
+
+                        <li class="contactus">
+
+                               <a href="">Nous contacter</a>
+
+                        </li>
+
+                        <li class="siteplan">
+
+                                <a href="">Plan du site</a>
+
+                        </li>
+
+                </ul>
+
+            </div>
+
+    </footer>
+
+
+</body>
+
+</html>

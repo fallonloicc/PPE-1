@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+
+		<meta charset="utf-8">
+
+
+		<script>
+			
+			let nombre;
+
+			function play(){
+
+				nombre = Math.floor(Math.random()*(20 - 0 +1)) + 0;
+				document.getElementById("1").src="ready.gif";
+
+				}
+
+			function jeu(){
+
+				let C= document.getElementById("chiffre").value ;
+
+				if (C == nombre){
+					document.getElementById("1").src="img/great.gif";
+					document.getElementById("2").innerHTML="Jimmy est sauvé !"
+				}
+
+				if (C > nombre){
+					document.getElementById("1").src="img/overdose.gif";
+					document.getElementById("2").innerHTML="Nooon Jimmy est en mauvaise posture !"
+
+				}
+
+				if (C < nombre){
+					document.getElementById("1").src="img/malade.gif";
+					document.getElementById("2").innerHTML="Jimmy est toujours malade ..."
+				}
+
+				if (C == 111){
+					document.getElementById("1").src="https://www.digischool.fr/images/article/bac-2016-les-genies-de-la-triche-1-lg-32301.jpg";
+					document.getElementById("2").innerHTML="La valeur est " + nombre;
+					
+				}
+
+			}
+
+			
+
+		</script>
+
+		<style>
+
+		body
+		{
+			text-align: center;
+		}
+	</style>
+
+		<script>
+
+			 function recommence(){
+
+				document.getElementById("chiffre").value="";
+				document.getElementById("1").src="";
+				document.getElementById("2").innerHTML="";
+
+				
+			}
+
+
+
+		</script>
+
+
+	</head>
+
+
+	<body>
+
+		<p>Devines le nombre de pillule que Jimmy doit prendre pour guérir !</p>
+		<button onclick="play()">Lances le jeu !</button>
+		<br><br>
+		<input type="text" id="chiffre"/>
+		<br><br> 
+		<button onclick="jeu()">Tentes ta chance</button>
+		<button onclick="recommence()">Rejouer</button>
+		<br><br>
+		<img id="1"><br><br>
+		<div id="2"></div>
+
+		
+
+
+
+	</body>
+
+</html>

@@ -1,0 +1,450 @@
+body
+{
+	background-color: #f2f2f2;
+	font-family: Times, Times New Roman, serif;
+
+}
+
+header
+{
+	z-index: 10;
+	background-color: #3571b2;
+	padding: 1%;
+
+}
+
+main
+{
+	z-index: -10;
+	padding:100px 0 50px 0;
+}
+
+footer
+{
+	font-size: 75%;
+	text-align: center;
+	color: grey;
+	margin-bottom: 4%;
+}
+
+footer a
+{
+		color: grey;
+		text-decoration: none;
+}
+
+#legal
+{
+	cursor: pointer;
+}
+
+/*MENU*/
+
+.footermenu li
+{
+	margin: 0 7%;
+	display: inline;
+}
+
+#listeMenu
+{
+	padding: 0;
+	margin: 1%;
+	margin-top: 50%;
+	text-align: center ;
+	padding: 3%;
+	border-radius: 5px;
+	display: inline;
+	
+
+}
+
+#listeMenu li
+{
+	display: inline;
+	list-style: none ;
+	margin: 0 2%;
+	border: 3px solid white;
+	padding: 0.5% 2.5%;
+	background-color: white;
+	border-radius: 30px;
+
+
+}
+
+nav a
+{
+	text-decoration: none;
+	color: #3571b2;
+	font-weight: bold;
+}
+
+nav a:hover
+{
+	color: #04284f;
+}
+
+#menu
+{
+	width:85%;
+	float:left;
+	font-size: 1vw;
+	margin-top: 2%;
+	margin-left: 5%;
+}
+
+/*SLIDESHOW*/
+
+#slideshow {
+	position: relative;
+	width: 1000px;
+	height: 530px;
+	padding: 15px;
+	margin: 0 auto 2em;
+	border: 1px solid #ddd;
+	background: #FFF;
+	margin-top: 7%;
+
+	background: linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
+	border-radius: 2px 2px 2px 2px;
+	box-shadow: 0 0 3px rgba(0,0,0, 0.2);
+}
+ 
+#slideshow:before,
+#slideshow:after {
+	position: absolute;
+	bottom:16px;
+	z-index: -10;
+	width: 50%;
+	height: 20px;
+	content: " ";
+	background: rgba(0,0,0,0.1);
+	border-radius: 50%;
+	box-shadow: 0 0 3px rgba(0,0,0, 0.4), 0 20px 10px rgba(0,0,0, 0.7);
+}
+#slideshow:before {
+	left:0;
+	transform: rotate(-4deg);
+}
+#slideshow:after {
+	right:0;
+	transform: rotate(4deg);
+}
+
+#slideshow .container {
+	position:relative;
+	width: 1000px;
+	height: 530px;
+	overflow: hidden;
+}
+	
+#slideshow .container:after {
+	position:absolute;
+	bottom: 0; left:0;
+	content: " ";
+	width: 100%;
+	height: 1px;
+	background: #999;
+}
+
+#slideshow .slider {
+	position: absolute;
+	left:0; top:0;
+	width: 400%;
+	height: 310px;
+}
+
+#slideshow figure {
+	position:relative;
+	display:inline-block;
+	padding:0; margin:0;
+}
+#slideshow figure:after {
+	position: absolute;
+	display:block;
+	content: " ";
+	top:0; left:0;
+	width: 100%; height: 100%;
+	box-shadow: 0 0 65px rgba(0,0,0, 0.5) inset;
+}
+
+@keyframes slider {
+	0%, 20%, 100%	{ left: 0 }
+	25%, 45%		{ left: -100% }
+	50%, 70%		{ left: -200% }
+	75%, 95%		{ left: -300% }
+}
+
+#slideshow .slider {
+
+	animation: slider 32s infinite;
+}
+
+/*ENTETE*/
+
+.entete
+{
+	position: absolute;
+	top: 0;
+	position: fixed;
+	width: 100%;
+}
+
+#logo
+{
+	margin-bottom: 1%;
+	width : 7%;
+	height : 100%;
+	min-height:20px;
+	float:left;
+}
+
+#logo img
+{
+   width:100%;
+} 
+
+/*CONNEXION*/
+
+#connexion
+{
+	float: right;
+	border: 2px solid #3571b2 ;
+	padding: 0.5%;
+	border-radius: 15px;
+	width:19%;
+	margin-top:8%;
+	background-color: white;
+	z-index: 100;
+	display: inline;
+	position: fixed;
+	margin-left: 79%;
+}
+
+#connexion form
+{
+	width: 100%;
+	float:right;
+}
+
+#connexion .action
+{
+	width:50%;
+	float:right;
+	margin-top: 4%;
+	margin-right: 2%;
+}
+#connexion label
+{
+	display: block;
+	float: none;
+	font-size:15px;
+	width:50%;
+	float:left;
+}
+
+#connexion input
+{
+	width: 40%;
+	float:left;
+}
+
+#cadena
+{
+	float: right;
+	cursor: pointer;
+	margin-top: -2.5%;
+}
+
+/*PAGE INDEX*/
+
+.texte
+{
+	display: inline-block;
+	border: 3px solid #04284f;
+	background-color: white;
+	width: 100%;
+	max-width:1000px;
+	height: 1200px;
+	border-radius: 10px;
+	color: black;
+}
+
+.whoweare
+{
+	text-align: center;
+
+}
+
+#actu
+{
+	text-align: left;
+	padding: 2%;
+	margin-left: 2%;
+	text-decoration: underline;
+}
+
+#plus
+{
+	display: block;
+	float: right;
+	margin-right: 2%;
+}
+
+/*PAGE PRESENTATION*/
+
+#rond
+{
+	text-align: center;
+}
+ 
+#circle 
+{
+	display: inline-block;
+	margin-top: 14%;
+	width: 300px; 
+	height: 300px;
+	background: #3571b2;
+	no-repeat silver ; 
+	-moz-border-radius: 50px; 
+	-webkit-border-radius: 150px; 
+	border-radius: 150px; 
+	text-align: center;
+	line-height: 11;
+	font-size: 170%;
+	color: white;
+	font-family: Gill Sans, sans-serif;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#textactu
+{
+	text-align: center;
+}
+
+.main .present
+{
+	padding-top: 4%;
+	display: block;
+	text-align: center;
+}
+
+#equipe
+{
+	display: inline-block;
+	padding-top: 5%;
+	text-align: center;
+}
+
+/*PAGE ACTUALITES*/
+
+.main .lastactu
+{
+	padding-top: 8%;
+	display: block;
+	text-align: center;
+}
+
+.main .secondactu
+{
+	padding-top: 5%;
+	display: block;
+	text-align: center;
+}
+
+#waaa
+{
+	padding-top: 7%
+}
+
+#tartiflette
+{
+	height: 20%;
+}
+
+/*PAGE CONTACT*/
+
+#petitform
+{
+	text-align: center;
+}
+
+#geo
+{
+
+	text-align: center;
+}
+
+#service
+{
+	text-align: center;
+
+}
+
+.main #contacter
+{
+	display: inline-block;
+	margin-top: 10%;
+	text-align: center;
+	padding-top: 2%;
+}
+
+/*FORMULAIRE*/
+
+#ui
+{
+	display: inline-block;
+	margin-top:1%;
+	margin-left: 45%;
+	margin-bottom: 2%;
+}
+
+#formulaire
+{
+	display: inline-block;
+	background-color: white;
+	border-color: #3571b2;
+	margin-top: 10%;
+	height: 400px;
+	width: 500px;
+	line-height: 222%;
+	padding-left: 8%;
+	padding-top: 4%;
+	margin-left: 32%;
+}
+
+.button
+{
+	display: inline-block;
+	margin-top: 2%;
+	margin-left: 15%;
+}
+
+#formulaire label
+{
+	display: block;
+	width: 150px;
+	float: left;
+}
+
+/* PAGE A PROPOS*/
+
+#apropos
+{
+	text-align: center;
+}
+
+.texte img
+{
+	width: 100%;
+	max-width: 800px;
+	margin-top: 8%;
+	margin-bottom: 8%;
+}
+
+#propos
+{
+	margin-top: 7%;
+
+}

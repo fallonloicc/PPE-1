@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Galaxy Swiss Bourdin</title>
+
+    <meta charset="utf-8">
+
+    <meta name="keywords" content="Laboratoire, GSB, Galaxy Swiss Bourdin, Efficom, Lille, Jean-Christophe Lhermitte, Mathieu Hauss, Loïc Fallon, PPE">
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <script type="text/javascript">
+
+                function actu (){
+                	document.location.href="actu.html";
+                }
+
+       			function inscription(){
+
+                    document.location.href="formulaire.html";
+                }
+
+                function message (){
+                    document.getElementById("message").innerHTML="Le serveur est en cours de maintenance.";
+                }
+
+                function log (){
+                	document.getElementById("connexion").style.visibility="visible";
+                	document.getElementById("cadena").style.visibility="hidden";
+                	setTimeout(function() {
+  						document.getElementById("cadena").style.visibility ="visible";
+                		document.getElementById("connexion").style.visibility ="hidden"
+                		document.getElementById("message").innerHTML=""; }, 8000);
+  					
+  				}
+
+  				function pop(){
+  					window.open("mention.html");
+  				}
+      
+                	
+
+
+
+            
+    </script>
+
+</head>
+
+<body>
+    <header class="entete">
+
+        <div id="logo">
+
+            <a href="index.html">
+        <img src="../img/logo-gsb.png"/>
+                
+
+            </a>
+    </div>
+    
+    <div id="menu">
+
+        <nav>
+
+                 <ul id="listeMenu">
+
+                    <li id="accueil">
+
+                        <a href="index.html">Accueil</a>
+
+                    </li>
+
+                    <li id="presentations">
+
+                        <a href="presentation.html">Présentation de l'entreprise</a>
+
+                    </li>
+
+                    <li id="actualité">
+
+                        <a href="actu.html">Actualités</a>
+
+                    <li id="contact">
+
+                        <a href="contact.html">Contact</a>
+
+                    </li>
+
+                    <li id="propos">
+
+                        <a href="apropos.html">A propos</a>
+
+                    </li>
+
+                    <img id="cadena" src="../img/login.png" onclick="log()" width="100" height="100">
+
+                </ul>
+
+        </nav>
+    </div>
+
+    
+
+    </header>
+
+            <div id="connexion" style="visibility: hidden;">
+                <form>
+
+                <label for="login">Identifiant :</label>
+                <input type="text" name="log">
+
+                
+
+                <label for="password">Mot de passe :</label>
+                <input type="text" name="pass">
+
+            </form>
+            
+            <div class="action">
+            <button id="inscription" onclick="inscription()">Inscription</button>
+
+            <button id="connect" onclick="message()">Connexion</button>
+            
+            </div>
+            <div id="message"></div>
+
+            </div>
+
+    <main id="apropos">
+        <section id="propos">
+
+            <h2 class="titrepropos">GSB organise un Hackaton pour récolter des fonds pour plusieurs assciations !</h2>
+
+            <div class="texte">
+                <img src="../img/code.jpg">
+                <p id="article">Galaxy Swiss Bourdin est fier de vous présenter leurs évênements de l'année. Un Hackathon entièrement organisé par nos soins.<br> Le but est simple ! Plusieurs séries d'exercice ou vous devez résoudre le problème le plus rapidement possible.<br> De nombreux cadeaux sont a remporter tel qu'un magnifique Alien ware ! Tout l'argent récupéré lors des inscriptions et de l'évênement seront redistribué a une association de recherche contre le cancer !<br><br>
+                    <b>N'hésitez plus inscrivez-vous !</b></p>
+            </div>
+
+        </section>
+
+        <section id="propos2">
+                <br>
+                <h2 class="titrepropos">GSB recrute !</h2>
+
+
+
+            <div class="texte">
+                <img src="../img/recrutement.jpg">
+                <p id="article"> GSB RECRUTE DANS L'ENSEMBLE DE LA FRANCE, DE L'INFORMATIQUE AUX SCIENCES DE LABORATOIRE ! <br> ENVOYEZ NOUS VOS CV</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+
+            <div class="copyright"><span>Copyright © 2018 Efficom EFFAB- Tout droits réservés - Réalisation <a id="jeu" href="jeu_temperature.html">Mathieu Hauss</a> / <a id="jeu" href="jeux_baton.html">Loïc Fallon</a> / <a id="jeu" href="jeu_pillule.html">Jean-Christophe Lhermitte</a> - Laboratoire GSB -     PPE</span></div>
+
+            <div class="footermenu">
+
+                <ul class="menu-footer">
+
+                        <li class="legalmention">
+
+                                <a id="legal" onclick="pop()">Mentions légales</a>
+
+                        </li>
+
+                        <li class="contactus">
+
+                               <a href="contact.html">Nous contacter</a>
+
+                        </li>
+
+                        <li class="siteplan">
+
+                                <a href="">Plan du site</a>
+
+                        </li>
+
+                </ul>
+
+            </div>
+
+    </footer>
+
+
+</body>
+
+</html>
+

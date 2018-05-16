@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Galaxy Swiss Bourdin</title>
+
+    <meta charset="utf-8">
+
+    <meta name="keywords" content="Laboratoire, GSB, Galaxy Swiss Bourdin, Efficom, Lille, Jean-Christophe Lhermitte, Mathieu Hauss, Loïc Fallon, PPE">
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <script type="text/javascript">
+                
+                function inscription(){
+
+                    document.location.href="formulaire.html";
+                }
+
+                function message (){
+                    document.getElementById("message").innerHTML="Le serveur est en cours de maintenance."
+                }
+
+                function actu (){
+                    document.location.href="actu.html";
+                }
+
+                
+                function inscription(){
+
+                    document.location.href="formulaire.html";
+                }
+
+                function message (){
+                    document.getElementById("message").innerHTML="Le serveur est en cours de maintenance."
+                }
+
+                 function validation() {
+           
+                let nom = document.getElementById("Nom").value;
+                let titre = document.getElementById("titre").value;
+                let message = document.getElementById("message").value;
+            
+                if (nom == "" || titre == "" || message == "") {
+                document.getElementById("affichage").innerHTML = "Veuillez remplir les champs vide.";
+            
+            } else {
+                document.getElementById("affichage").innerHTML ="Votre requête à bien été envoyé.";
+                document.getElementById("titre").value = "";
+                document.getElementById("Nom").value = "";
+                document.getElementById("message").value = "";
+                open("mailto:?to=lfallon@efficom-lille.com");
+
+            }
+
+        }
+
+
+        function reset() {
+            document.getElementById("titre").value = "";
+            document.getElementById("Nom").value = "";
+            document.getElementById("message").value = "";
+            document.getElementById("affichage").innerHTML = "";
+
+        }
+
+        function log (){
+                    document.getElementById("connexion").style.visibility="visible";
+                    document.getElementById("cadena").style.visibility="hidden";
+                    setTimeout(function() {
+                        document.getElementById("cadena").style.visibility ="visible";
+                        document.getElementById("connexion").style.visibility ="hidden" }, 8000);
+                    
+                }
+        function pop (){
+                    window.open("mention.html");
+                }
+
+            
+    </script>
+
+</head>
+
+<body>
+    <header class="entete">
+
+        <div id="logo">
+
+            <a href="index.html">
+        <img src="../img/logo-gsb.png"/>
+                
+
+            </a>
+    </div>
+    
+    <div id="menu">
+
+        <nav>
+
+                 <ul id="listeMenu">
+
+                    <li id="accueil">
+
+                        <a href="index.html">Accueil</a>
+
+                    </li>
+
+                    <li id="presentations">
+
+                        <a href="presentation.html">Présentation de l'entreprise</a>
+
+                    </li>
+
+                    <li id="actualité">
+
+                        <a href="actu.html">Actualités</a>
+
+                    <li id="contact">
+
+                        <a href="contact.html">Contact</a>
+
+                    </li>
+
+                    <li id="propos">
+
+                        <a href="apropos.html">A propos</a>
+
+                    </li>
+
+                    <img id="cadena" src="../img/login.png" onclick="log()" width="100" height="100">
+
+                </ul>
+
+        </nav>
+    </div>
+
+    
+
+    </header>
+
+            
+
+            <div id="connexion" style="visibility: hidden;">
+                <form>
+
+                <label for="login">Identifiant :</label>
+                <input type="text" name="log">
+
+                
+
+                <label for="password">Mot de passe :</label>
+                <input type="text" name="pass">
+
+            </form>
+            
+            <div class="action">
+            <button id="inscription" onclick="inscription()">Inscription</button>
+
+            <button id="connect" onclick="message()">Connexion</button>
+            
+            </div>
+            <div id="message"></div>
+
+            </div>
+
+    <main class="main" id="petitform">
+        <form>
+            <fieldset id="contacter">
+
+                <legend><b>Ecrivez nous !</b></legend>
+                <label><b>Titre:</b></label>
+                <input id="titre" size="60">
+                <br><br>
+                <label><b>Mail:</b></label>
+                <input id="Nom" size="60">
+                <br><br>
+
+                <label><b>Message:</b></label>
+                <textarea id="message" rows="5" cols="60"></textarea>
+                <br><br>
+
+
+            </fieldset>
+        </form>
+
+        <div>
+            <button onclick="validation()">Soumettre</button>
+            <button onclick="reset()">Effacer</button>
+            <div class="afficheur">
+                <p id="affichage"></p>
+            </div>
+        </div>
+
+    </main>
+
+        <div id="geo">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2624.2692515080025!2d2.3020059!3d48.8721435!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc21e31d175%3A0x2bdd42655b220c!2s104+Av.+des+Champs-%C3%89lys%C3%A9es%2C+75008+Paris!5e0!3m2!1sfr!2sfr!4v1517307091366" width="800" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        </div><br><br>
+
+        <div id="service">
+            <p> Besoin d'aide ? Jean-Christophe à votre service !</p>
+            <b><p>06 37 46 38 70</p></b>
+        </div>
+
+        <footer class="footer">
+
+        <div class="copyright"><span>Copyright © 2018 Efficom EFFAB- Tout droits réservés - Réalisation <a id="jeu" href="jeu_temperature.html">Mathieu Hauss</a> / <a id="jeu" href="jeux_baton.html">Loïc Fallon</a> / <a id="jeu" href="jeu_pillule.html">Jean-Christophe Lhermitte</a> - Laboratoire GSB -     PPE</span></div>
+
+        <div class="footermenu">
+
+            <ul class="menu-footer">
+
+                <li class="legalmention">
+
+                    <a id="legal" onclick="pop()">Mentions légales</a>
+
+                </li>
+
+                <li class="contactus">
+
+                    <a href="contact.html">Nous contacter</a>
+
+                </li>
+
+                <li class="siteplan">
+
+                    <a href="">Plan du site</a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

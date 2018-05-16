@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+
+		<meta charset="utf-8">
+
+
+		<script>
+        //variables globales
+        let nbBatons = 15;
+        let tourActuel = 1;
+
+        function afficherEtat() {
+            document.getElementById("tour_actuel").innerHTML = "Tour du joueur " + tourActuel;
+            document.getElementById("batons_restants").innerHTML = "Pillules restantes " + nbBatons;
+
+            //aficher graphiquement le nombre de bâton restants
+            
+            document.getElementById("batons_restants_image").innerHTML = "";
+            for (let i = 0; i < nbBatons; i++) {
+                
+                document.getElementById("batons_restants_image").innerHTML += '<img src="img/pillule1.jpg"> ';
+            }
+        }
+
+        function jeu(nbBatonsPris) {
+            //nbBatons = nbBatons - nbBatonsPris;
+            nbBatons -= nbBatonsPris;
+
+            //je vérifie si la partie est terminée => s'il reste un baton
+            if (nbBatons <= 0) {
+                //le joeur actuel a perdu
+                document.getElementById("partie_finie").innerHTML = "Partie terminée. Le joeur " + tourActuel + " a perdu.";
+                document.getElementById("boutons").style.visibility = "hidden";
+            } else {
+                //changer tour actuel
+                if (tourActuel == 1) {
+                    tourActuel = 2;
+                } else {
+                    tourActuel = 1;
+                }
+            }
+
+            afficherEtat();
+        }
+
+    </script>
+
+    <style type="text/css">
+    	
+    	body
+    	{
+    		text-align: center;
+    	}
+
+        #tour_actuel
+        {
+            font-weight: bold;
+            font-size: 300%;
+        }
+    </style>
+
+
+	</head>
+
+
+	<body onload="afficherEtat()">
+
+		<p>Le joueur prenant la ou les dernières pillules perd.</p>
+        <p>Cliques sur l'un des bouttons ci-dessous pour retirer des pillules</p>
+
+			<div id="boutons">
+       		<button onclick="jeu(1)">1</button>
+        	<button onclick="jeu(2)">2</button>
+        	<button onclick="jeu(3)">3</button>
+   		 	</div><br>
+    		<div id="tour_actuel"></div><br>
+    		<div id="batons_restants"></div><br>
+    		
+    		<div id="batons_restants_image"></div><br>
+    		<div id="partie_finie"></div>
+		
+
+
+
+	</body>
+
+</html>
